@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <title>3D绘制 - 4.11 (官方示例)</title>
+        <link rel="shortcut icon" href="/src/assets/favicon/glasses.ico" />
+        <style>
+            html,
+            body,
+            #viewDiv {
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            #sketchPanel {
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            .esri-button {
+                margin: 2px;
+            }
+        </style>
+        <link
+            rel="stylesheet"
+            href="./../node_modules/arcgis-js-api/themes/light/main.css"
+        />
+        <script src="dojoConfig.js"></script>
+        <script src="../node_modules/dojo/dojo.js"></script>
+    </head>
+
+    <body>
+        <div id="viewDiv"></div>
+        <div id="sketchPanel" class="esri-widget">
+            <button
+                id="extrudedPolygon"
+                data-type="polygon"
+                class="esri-button"
+            >
+                绘制楼房
+            </button>
+            <button id="point" data-type="point" class="esri-button">
+                绘制兴趣点
+            </button>
+            <button id="line" data-type="polyline" class="esri-button">
+                绘制路线
+            </button>
+        </div>
+    </body>
+    <script>
+        require(["app/Draw3D"]);
+    </script>
+</html>

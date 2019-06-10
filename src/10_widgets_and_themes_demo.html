@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <title>控件与UI主题</title>
+
+        <link rel="shortcut icon" href="/src/assets/favicon/glasses.ico" />
+        <style>
+            html,
+            body,
+            #viewDiv {
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            .styled-select {
+                height: 32px;
+                font-size: 14px;
+                width: 300px;
+            }
+        </style>
+        <link
+            rel="stylesheet"
+            id="esriStylesheet"
+            href="./../node_modules/arcgis-js-api/themes/light/main.css"
+        />
+        <script src="dojoConfig.js"></script>
+        <script src="../node_modules/dojo/dojo.js"></script>
+    </head>
+    <body>
+        <div id="viewDiv"></div>
+        <div id="editorDiv"></div>
+    </body>
+    <script>
+        require(["app/WidgetsThemes"]);
+    </script>
+</html>

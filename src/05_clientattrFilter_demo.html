@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <title>
+            客户端按属性过滤 - 4.11
+        </title>
+        <link rel="shortcut icon" href="/src/assets/favicon/glasses.ico" />
+
+        <link
+            rel="stylesheet"
+            href="./../node_modules/arcgis-js-api/themes/dark/main.css"
+        />
+        <script src="dojoConfig.js"></script>
+        <script src="../node_modules/dojo/dojo.js"></script>
+
+        <style>
+            html,
+            body,
+            #viewDiv {
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+            }
+            #legendDiv {
+                cursor: pointer;
+            }
+            #infoDiv {
+                padding: 10px;
+                width: 200px;
+                margin: 5px;
+                font-size: 14px;
+            }
+            .options {
+                max-width: 200px;
+                width: 100%;
+                height: 25px;
+                margin: 10px 0px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="viewDiv"></div>
+        <div id="infoDiv" class="esri-widget">
+            <label for="effct-select">选项:</label><br />
+            <select id="effct-select" class="options">
+                <option value="filter" selected>过滤</option>
+                <option value="highlight">高亮</option> </select
+            ><br />
+            <button class="esri-button" id="clearFilter" type="button">
+                清除
+            </button>
+            <div id="legendDiv"></div>
+        </div>
+    </body>
+    <script>
+        require(["app/ClientFilter"]);
+    </script>
+</html>

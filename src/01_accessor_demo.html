@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <title>
+            使用Accessor定义类
+        </title>
+        <link rel="shortcut icon" href="/src/assets/favicon/glasses.ico" />
+        <script src="dojoConfig.js"></script>
+        <script src="../node_modules/dojo/dojo.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <form id="simple-form" onsubmit="event.preventDefault();">
+                First Name: <input type="text" id="firstName" value="" /><br />
+                Last Name: <input type="text" id="lastName" value="" /><br />
+                <button id="confirm">submit</button>
+            </form>
+            <h1 id="greetings"></h1>
+        </div>
+    </body>
+    <script>
+        require(["app/Person"]);
+    </script>
+</html>

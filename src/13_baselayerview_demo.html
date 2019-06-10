@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta
+            name="description"
+            content="Canvas Flowmap Layer with the Esri ArcGIS API for JavaScript v4."
+        />
+
+        <title>自定义BaseLayerView(Canvas Flowmap Layer)</title>
+        <link rel="shortcut icon" href="/src/assets/favicon/glasses.ico" />
+        <link
+            rel="stylesheet"
+            href="./../node_modules/arcgis-js-api/themes/light/view.css"
+        />
+        <style>
+            html,
+            body,
+            #viewDiv {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+
+        <script src="dojoConfig.js"></script>
+        <script src="../node_modules/dojo/dojo.js"></script>
+    </head>
+
+    <body>
+        <div id="viewDiv"></div>
+    </body>
+    <script>
+        require(["app/CanvasFlow"]);
+    </script>
+</html>

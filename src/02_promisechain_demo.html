@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <title>链式Promise (官网示例)</title>
+
+        <style>
+            html,
+            body,
+            #viewDiv {
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            #results {
+                top: 20px;
+                right: 20px;
+                position: absolute;
+                z-index: 99;
+                background-color: white;
+                border-radius: 8px;
+                padding: 10px;
+                opacity: 0.75;
+            }
+        </style>
+        <link
+            rel="stylesheet"
+            href="./../node_modules/arcgis-js-api/themes/light/main.css"
+        />
+        <link rel="shortcut icon" href="/src/assets/favicon/glasses.ico" />
+        <script src="dojoConfig.js"></script>
+        <script src="../node_modules/dojo/dojo.js"></script>
+    </head>
+
+    <body>
+        <div id="viewDiv">
+            <div id="results">
+                <button id="startBtn">开始Promise Chain</button>
+                <span id="areaSpan"></span>
+            </div>
+        </div>
+    </body>
+    <script>
+        require(["app/PromiseChain"]);
+    </script>
+</html>

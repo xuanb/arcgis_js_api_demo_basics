@@ -1,0 +1,17 @@
+{
+    "name": "arcgis_js_api_demo_basics",
+    "version": "1.0.0",
+    "description": "该repo包含了一些基本的ArcGIS JS API 4.x 功能",
+    "scripts": {
+        "start": "http-server"
+    },
+    "keywords": [],
+    "author": "XB.L",
+    "license": "ISC",
+    "dependencies": {
+        "arcgis-js-api": "^4.11.1",
+        "http-server": "^0.11.1",
+        "intersection-observer": "^0.7.0",
+        "papaparse": "^5.0.0"
+    }
+}
