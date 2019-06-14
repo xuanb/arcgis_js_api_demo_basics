@@ -14,7 +14,7 @@ $npm install
 $http-server
 ```
 
-其中，[示例 9](#editor)和[示例 10](#themes)都需要一些操作，具体请看下文。
+其中，[示例 9](#editor) 和 [示例 10](#themes) 都需要一些操作，具体请看下文。
 
 ### Demo 内容
 
@@ -69,7 +69,7 @@ someAsyncFunction()
 
 针对 JS API 中的错误信息具体参考[官网资料](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html)。
 
-使用 Promise 最大的好处是链式调用 Promise。因为在很多情况下，我们可能会执行多个异步操作，上一个异步操作的结果需要在下一个异步操作中使用。在[02_promisechain_demo](src/app/PromiseChain.js)示例中，我们创建了缓冲区，将缓冲区绘制到 UI 上，缩放至缓冲区，然后计算缓冲区面积，最后将计算的面积显示到 UI 上。要进行这样的链式 Promise，注意需要将 Promise 的解析值将传递（使用 return）给下一个 Promise。
+使用 Promise 最大的好处是链式调用 Promise。因为在很多情况下，我们可能会执行多个异步操作，上一个异步操作的结果需要在下一个异步操作中使用。在[02_promisechain_demo](src/app/PromiseChain.js)示例中，我们创建了缓冲区，将缓冲区绘制到 UI 上，缩放至缓冲区，然后计算缓冲区面积，最后将计算的面积显示到 UI 上。要进行这样的链式 Promise，注意需要将 Promise 的解析值将传递（使用 return）给下一个 _.then()_ 中的回调函数。
 
 3. GeoJSONLayer
 
