@@ -9,6 +9,7 @@
     "author": "XB.L",
     "license": "ISC",
     "dependencies": {
+        "@types/arcgis-js-api": "^4.11.0",
         "arcgis-js-api": "^4.11.1",
         "http-server": "^0.11.1",
         "intersection-observer": "^0.7.0",

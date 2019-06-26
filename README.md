@@ -170,11 +170,25 @@ JS API 提供了几个图层的基类，可以用于扩展：
 
 ![二三维视图同步](screenshots/syncViews.png)
 
+16. 控件开发
+
+控件开发需要使用 typescript 去写，虽然 ts 实际用起来感觉和 javascript 很像，但是写的时候有种惴惴不安的感觉，不知道一样的语法是不是会有问题。所以还是要花一些时间去稍微研究一下的。我只放了一个非常简单的示例，按道理来说应该按照 widget & widget viewmodel 这个路数来的，这个示例只有 widget。
+
+具体这个 widget 的功能是去生成贝塞尔曲线的，需要的参数有一个 polyline，和 graphicslayer。
+
+widget 使用 ts 写的，后面需要用编译器编译成 js。这些具体官网上都有相关的教程。简单来说，你需要安装 typescript 的环境。
+
+```
+npm install -g typescript
+```
+
+有了环境，就可以使用`tsc`这个命令去编译 typescript 了。在这个 demo 中，js 已经编译好了，可以直接使用。如果想要自己编译的话，就 cmd/bash 到 ts 文件的路径下，用 tsc 命令就好。
+
 ### What's more
 
 There's nothing more, lol.
 
-东西都比较简单，之前在开发者大会的时候，有人和我要代码，我都有点不好意思给。稍微整理了一下，希望能帮到大家。开发者大会中讲了一点控件开发，如果有时间也会整理这个部分的。
+东西都比较简单，之前在开发者大会的时候，有人和我要代码，我都有点不好意思给。稍微整理了一下，希望能帮到大家。
 
 Made with love.
 

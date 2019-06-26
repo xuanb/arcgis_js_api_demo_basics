@@ -35,6 +35,10 @@ var dojoConfig = this.dojoConfig || {};
             location: "./../../src/util"
         });
         addPkgIfNotPresent({
+            name: "widget",
+            location: "./../../src/widget_dev"
+        });
+        addPkgIfNotPresent({
             name: "lib",
             location: "./../../lib"
         });
