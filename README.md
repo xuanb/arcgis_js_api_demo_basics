@@ -164,6 +164,12 @@ JS API 提供了几个图层的基类，可以用于扩展：
 
 ![三维](screenshots/3D_demo.png)
 
+15. 二三维视图同步
+
+二三维视图同步更新是个不错的效果。官网示例上有这部分，不过在缩放二维视图的时候三维视图不一定会更新。稍微做了一点点更改，效果看起来还 ok。
+
+![二三维视图同步](screenshots/syncViews.png)
+
 ### What's more
 
 There's nothing more, lol.
