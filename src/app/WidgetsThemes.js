@@ -143,12 +143,12 @@ define([
         view.ui.add(
             new Expand({
                 view: view,
-                group: "bottom-right",
+                group: "top-right",
                 content: new BasemapGallery({
                     view: view
                 })
             }),
-            "bottom-right"
+            "top-right"
         );
 
         // Coordinate Conversion
@@ -156,7 +156,7 @@ define([
             new CoordinateConversion({
                 view: view
             }),
-            "bottom-left"
+            "bottom-right"
         );
 
         //  Layer List
