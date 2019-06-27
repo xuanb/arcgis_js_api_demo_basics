@@ -74,7 +74,7 @@ someAsyncFunction()
 3. GeoJSONLayer
 
 GeoJSON 是我们常见的一种空间数据格式。在 ArcGIS JS API 4.11 中，推出了 GeoJSONLayer，也就意味着我们不必再进行图层的扩展，直接读取 GeoJSON 数据了。
-不过还是有一些限制的：每个 GeoJSONLayer 只接受一种几何类型；每个 GeoJSONLayer 只接受一个属性的 schema；不支持 GeometryCollection；不支持使用 Object 作为属性只；不支持横跨 180 度经线的几何图形。
+不过还是有一些限制的：每个 GeoJSONLayer 只接受一种几何类型；每个 GeoJSONLayer 只接受一个属性的 schema；不支持 GeometryCollection；不支持使用 Object 作为属性值；不支持横跨 180 度经线的几何图形。
 
 4. 自定义图层
 
