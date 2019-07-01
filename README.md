@@ -7,7 +7,9 @@
 ### 前言
 
 这些代码主要面向初学 ArcGIS JS API 4.x 的开发人员。示例代码都相对简单，数据大多也用的 GeoJSON 格式（但编辑控件必须使用 FeatureLayer，所以对应的示例内调用的是 online 上的一个可编辑的 Feature Service）。
-大概说一下代码的组织方式，ArcGIS JS API 使用 npm 安装的，所以在 node_modules 里，用的不是 CDN 上的库。每一个 demo 有一个 html 文件及一个 js 文件。所有的 js 文件存储路径为[src/app/](./src/app)。使用也很简单，按照下面命令来就好了。
+大概说一下代码的组织方式，ArcGIS JS API 使用 npm 安装的，所以在 node_modules 里，用的不是 CDN 上的库。每一个 demo 有一个 html 文件及一个 js 文件。所有的 js 文件存储路径为[src/app/](./src/app)。使用也很简单，按照下面命令来就好了。当然，需要提前安装[nodejs](https://nodejs.org/en/)。
+
+_注：我是在 windows 环境下做的，按道理来讲 linux 或者 MacOS 环境下一样运行方式没有什么区别，但我没测试_:innocent:
 
 ```
 $npm install
@@ -172,7 +174,7 @@ JS API 提供了几个图层的基类，可以用于扩展：
 
 16. 控件开发
 
-控件开发需要使用 typescript 去写，虽然 ts 实际用起来感觉和 javascript 很像，但是写的时候有种惴惴不安的感觉，不知道一样的语法是不是会有问题。所以还是要花一些时间去稍微研究一下的。我只放了一个非常简单的示例，按道理来说应该按照 widget & widget viewmodel 这个路数来的，这个示例只有 widget。
+控件开发需要使用 typescript 去写，虽然 ts 实际用起来感觉和 javascript 很像，但是写的时候有种惴惴不安的感觉，不知道一样的语法是不是会有问题。所以还是要花一些时间去稍微研究一下的。我只放了一个非常简单的示例，按道理来说应该按照 widget view & widget viewmodel 这个路数来的，这个示例只有 view，业务逻辑写在一块了。
 
 具体这个 widget 的功能是去生成贝塞尔曲线的，需要的参数有一个 polyline，和 graphicslayer。
 
@@ -190,6 +192,4 @@ There's nothing more, lol.
 
 东西都比较简单，之前在开发者大会的时候，有人和我要代码，我都有点不好意思给。稍微整理了一下，希望能帮到大家。
 
-Made with love.
-
-♥ Xuanbei
+:kissing_heart: Xuanbei
