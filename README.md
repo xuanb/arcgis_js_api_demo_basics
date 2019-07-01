@@ -190,7 +190,7 @@ npm install -g typescript
 
 这个大家可能自己都知道，但是还是想提一下。如果手机和电脑在一个局域网内，直接在手机浏览器里输入电脑的 ip 地址和端口号就行。当手机共享热点的时候，那就是在一个局域网内，也行得通。下图就是在手机共享热点后，在手机端查看示例 10 的一个截图。
 
-![手机访问](screenshots/mobile.jpg)
+<img src="screenshots/mobile.jpg" alt="手机访问" width="30%">
 
 ### What's more
 
