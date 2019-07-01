@@ -9,7 +9,7 @@
 这些代码主要面向初学 ArcGIS JS API 4.x 的开发人员。示例代码都相对简单，数据大多也用的 GeoJSON 格式（但编辑控件必须使用 FeatureLayer，所以对应的示例内调用的是 online 上的一个可编辑的 Feature Service）。
 大概说一下代码的组织方式，ArcGIS JS API 使用 npm 安装的，所以在 node_modules 里，用的不是 CDN 上的库。每一个 demo 有一个 html 文件及一个 js 文件。所有的 js 文件存储路径为[src/app/](./src/app)。使用也很简单，按照下面命令来就好了。当然，需要提前安装[nodejs](https://nodejs.org/en/)。
 
-_注：我是在 windows 环境下做的，按道理来讲 linux 或者 MacOS 环境下一样运行方式没有什么区别，但我没测试_:innocent:
+_PS：我是在 windows 环境下做的，按道理来讲 linux 或者 MacOS 环境下一样运行方式没有什么区别，但我没测试_:innocent:
 
 ```
 $npm install
@@ -185,6 +185,12 @@ npm install -g typescript
 ```
 
 有了环境，就可以使用`tsc`这个命令去编译 typescript 了。在这个 demo 中，js 已经编译好了，可以直接使用。如果想要自己编译的话，就 cmd/bash 到 ts 文件的路径下，用 tsc 命令就好。
+
+### 移动端（手机）访问:raising_hand:
+
+这个大家可能自己都知道，但是还是想提一下。如果手机和电脑在一个局域网内，直接在手机浏览器里输入电脑的 ip 地址和端口号就行。当手机共享热点的时候，那就是在一个局域网内，也行得通。下图就是在手机共享热点后，在手机端查看示例 10 的一个截图。
+
+![手机访问](screenshots/mobile.jpg)
 
 ### What's more
 
