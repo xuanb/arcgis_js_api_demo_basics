@@ -1,6 +1,4 @@
-# ArcGIS JS API 4.11 示例
-
-## ArcGIS JS API 高级开发 (2019 Esri 空间信息技术开发者大会)
+# ArcGIS JS API 4.12 示例
 
 ---
 
@@ -10,6 +8,7 @@
 大概说一下代码的组织方式，ArcGIS JS API 使用 npm 安装的，所以在 node_modules 里，用的不是 CDN 上的库。每一个 demo 有一个 html 文件及一个 js 文件。所有的 js 文件存储路径为[src/app/](./src/app)。使用也很简单，按照下面命令来就好了。当然，需要提前安装[nodejs](https://nodejs.org/en/)。
 
 _PS：我是在 windows 环境下做的，按道理来讲 linux 或者 MacOS 环境下一样运行方式没有什么区别，但我没测试_:innocent:
+\_PPS：最开始用的是 4.11，刚发布了 4.12，就把库更新了一下。
 
 ```
 $npm install
@@ -156,7 +155,7 @@ JS API 提供了几个图层的基类，可以用于扩展：
 
 13. LayerView
 
-图层视图（LayerView）用于控制图层的渲染。之前的客户端过滤功能，就是通过操作 LayerView 实现的。注意的是，LayerView 的使用一定要在其加载后。在 13_baselayerview_demo 中，主要展示了对 LayerView 的扩展。这里用了[Canvas-Flowmap-Layer](https://github.com/sarahbellum/Canvas-Flowmap-Layer)，对 JS API 中提供的 BaseLayerView2D 做了扩展。大概的逻辑是使用 BaseLayerView2D 中提供的 canvas 2D 进行绘制，绘制的点则是通过地理坐标转换屏幕坐标实现的。注意一下，在 Canvas-Flowmap-Layer 的 github repo 中，示例使用的是 4.10。在升级到 4.11 的时候（4.11 修复了屏幕坐标与地理坐标转换屏幕坐标不一致的问题），需要对源代码进行修改。当然，在这个示例中，源代码已经修改过了。
+图层视图（LayerView）用于控制图层的渲染。之前的客户端过滤功能，就是通过操作 LayerView 实现的。注意的是，LayerView 的使用一定要在其加载后。在 13_baselayerview_demo 中，主要展示了对 LayerView 的扩展。这里用了[Canvas-Flowmap-Layer](https://github.com/sarahbellum/Canvas-Flowmap-Layer)，对 JS API 中提供的 BaseLayerView2D 做了扩展。大概的逻辑是使用 BaseLayerView2D 中提供的 canvas 2D 进行绘制，绘制的点则是通过地理坐标转换屏幕坐标实现的。
 
 ![Canvas-Flowmap-Layer](screenshots/baselayerview2d_demo.png)
 
