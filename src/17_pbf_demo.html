@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <title>高性能的feature layer</title>
+        <meta name="description" content="自定义控件--生成贝塞尔曲线" />
+        <link rel="shortcut icon" href="/src/assets/favicon/glasses.ico" />
+        <link
+            rel="stylesheet"
+            href="./../node_modules/arcgis-js-api/themes/dark/main.css"
+        />
+
+        <style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            #applicationDiv {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            #viewDiv {
+                width: 100%;
+                height: 100%;
+                flex: 1 1 auto;
+                order: 1;
+            }
+
+            #titleDiv {
+                font-weight: 400;
+                font-style: normal;
+                font-size: 1.2019rem;
+                padding: 10px;
+            }
+
+            #sliderContainer {
+                flex: 0 0 80px;
+                order: 2;
+
+                display: flex;
+                flex-flow: row;
+
+                padding: 0 12px;
+            }
+
+            #sliderValue {
+                flex: 0 0 100px;
+                order: 1;
+
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+
+                font-size: 300%;
+            }
+
+            #sliderInnerContainer {
+                flex: 1 1 auto;
+                order: 2;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 20px;
+            }
+
+            #sliderLabels {
+                flex: 1 1 auto;
+                order: 1;
+
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+
+            #rangeWrapper {
+                flex: 1 1 auto;
+                order: 2;
+
+                position: relative;
+                padding: 0 20px;
+            }
+
+            #slider {
+                width: 100%;
+            }
+
+            /**
+    * Play/Stop toggle button
+    */
+
+            #playButton {
+                flex: 0 0 100px;
+                order: 3;
+
+                margin: 20px 0;
+            }
+
+            .toggle-button {
+                display: flex;
+            }
+
+            .toggle-button.toggled .toggle-button-icon {
+                color: #cc1b1b;
+            }
+
+            .toggle-button .toggle-button-icon {
+                color: #1bcc1b;
+            }
+
+            .toggle-button > :nth-child(2) {
+                display: none;
+            }
+
+            .toggle-button.toggled > :nth-child(1) {
+                display: none;
+            }
+
+            .toggle-button.toggled > :nth-child(2) {
+                display: block;
+            }
+
+            .tooltip {
+                position: absolute;
+                pointer-events: none;
+                transition: opacity 200ms;
+            }
+
+            .tooltip > div {
+                margin: 0 auto;
+                padding: 12px;
+                border-radius: 4px;
+                box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.75);
+                transform: translate3d(-50%, -125%, 0);
+            }
+        </style>
+        <script src="dojoConfig.js"></script>
+        <script src="../node_modules/dojo/dojo.js"></script>
+    </head>
+
+    <body>
+        <div id="applicationDiv">
+            <div id="viewDiv">
+                <!-- <div id="titleDiv" class="esri-widget" style="display: none">
+                    百万级面要素渲染查询
+                </div> -->
+            </div>
+            <div id="sliderContainer" class="esri-widget">
+                <span id="sliderValue"></span>
+                <div id="sliderInnerContainer">
+                    <div id="sliderLabels">
+                        <span>1880</span> <span>2017</span>
+                    </div>
+                    <div id="rangeWrapper">
+                        <input
+                            id="slider"
+                            type="range"
+                            min="1880"
+                            max="2017"
+                            step="1"
+                            value="1984"
+                        />
+                    </div>
+                </div>
+                <div
+                    id="playButton"
+                    class="esri-widget esri-widget--button toggle-button"
+                >
+                    <div>
+                        <span
+                            class="toggle-button-icon esri-icon-play"
+                            aria-label="play icon"
+                        ></span>
+                        播放
+                    </div>
+                    <div>
+                        <span
+                            class="toggle-button-icon esri-icon-pause"
+                            aria-label="pause icon"
+                        ></span>
+                        停止
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        require(["app/PBF"]);
+    </script>
+</html>
