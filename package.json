@@ -13,6 +13,6 @@
         "arcgis-js-api": "^4.12.0",
         "http-server": "^0.11.1",
         "intersection-observer": "^0.7.0",
-        "papaparse": "^5.0.0"
+        "papaparse": "^5.2.0"
     }
 }
